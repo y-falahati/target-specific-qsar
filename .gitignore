@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+
+# OS
+.DS_Store
+
+# Data
+data/raw/*
+data/interim/*
+data/processed/*
+
+# Results generated locally
+results/figures/*
+results/tables/*
+
+# Secrets
+.env

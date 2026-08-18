@@ -1,0 +1,15 @@
+name: molecular-activity
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - python=3.11
+  - rdkit
+  - numpy
+  - seaborn
+  - pandas
+  - scikit-learn
+  - jupyterlab
+  - matplotlib
+  - xgboost
+prefix: /home/yasamin_falahati/miniconda3/envs/molecular-activity
