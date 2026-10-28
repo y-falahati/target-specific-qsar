@@ -3,24 +3,28 @@ __pycache__/
 *.py[cod]
 *.so
 
-# Jupyter
-.ipynb_checkpoints/
-
 # Virtual environments
 .venv/
 venv/
+.env
+
+# Jupyter and editors
+.ipynb_checkpoints/
+.vscode/
 
 # OS
 .DS_Store
 
-# Data
+# Raw and intermediate data
 data/raw/*
 data/interim/*
+
+# Processed datasets
 data/processed/*
 
-# Results generated locally
+# Generated results
 results/figures/*
 results/tables/*
 
-# Secrets
-.env
+# Large serialized models
+models/*.joblib
