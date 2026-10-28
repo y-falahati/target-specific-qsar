@@ -158,3 +158,23 @@ Acknowledgments
 Bioactivity records are sourced from ChEMBL. Molecular parsing and descriptor calculation use RDKit, and model development uses scikit-learn.
 Disclaimer
 This repository is a research and learning project. Predictions are computational estimates and should not be interpreted as experimentally confirmed activity, clinical evidence, or therapeutic recommendations.
+
+## Model Evaluation and Diagnostics
+
+### Predicted vs. Observed pIC50
+
+The scatter plot compares the tuned Random Forest predictions with the experimentally derived pIC50 values in the held-out test set. The dashed diagonal represents perfect agreement between predicted and observed values.
+
+![Tuned Random Forest: predicted versus observed pIC50](docs/figures/egfr_tuned_test_predicted_vs_observed.png)
+
+### Residual Analysis
+
+Residuals are calculated as observed pIC50 minus predicted pIC50. Positive residuals indicate underprediction, while negative residuals indicate overprediction.
+
+![Tuned Random Forest: test-set residuals](docs/figures/egfr_tuned_test_residuals.png)
+
+### Descriptor Permutation Importance
+
+Permutation importance estimates how much the validation score deteriorates when a descriptor is shuffled. It measures model reliance, not causality or the direct biological importance of a descriptor.
+
+![Random Forest descriptor permutation importance](docs/figures/egfr_rf_permutation_importance.png)
